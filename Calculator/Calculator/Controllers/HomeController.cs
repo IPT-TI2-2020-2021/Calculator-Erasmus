@@ -17,13 +17,32 @@ namespace Calculator.Controllers {
          _logger = logger;
       }
 
+
+
+      /// <summary>
+      /// 1st call to the View
+      /// </summary>
+      /// <returns></returns>
+      [HttpGet]
       public IActionResult Index() {
          return View();
       }
 
-      public IActionResult Privacy() {
+      // 2nd call to our calculator
+      [HttpPost]
+      public IActionResult Index( string bt ) {
+
+
+
+
+
          return View();
       }
+
+
+
+
+
 
       [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
       public IActionResult Error() {
